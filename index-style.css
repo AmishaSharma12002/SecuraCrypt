@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000; /* Black background color */
+    color: #fff; /* White text color */
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Add Barlow font to the h1 */
+h1 {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700; /* Bold */
+    font-style: italic; /* Italic */
+}
+
+.red-black-container {
+    text-align: center;
+}
+
+.center-container {
+    text-align: center;
+}
+
+.animated-text {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.word {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.character {
+    opacity: 0;
+    display: inline-block;
+    animation: typing 0.4s forwards; /* Faster typing speed */
+}
+
+@keyframes typing {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Rest of your existing CSS styles for buttons */
+
+
+/* Button styling */
+button {
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #f00; /* Red border */
+    background-color: #f00; /* Red background */
+    color: #fff; /* White text color */
+    border-radius: 5px;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1); /* Increase size on hover */
+    box-shadow: 0 0 15px #fff, 0 0 30px #fff; /* White glow effect on hover */
+}
+
+
+/* Shooting star styling */
+.shooting-star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff; /* White color for shooting stars */
+    border-radius: 50%;
+    animation: twinkleShootingStar 0.5s linear infinite alternate, moveShootingStar linear;
+}
+
+@keyframes twinkleShootingStar {
+    to {
+        opacity: 0.5; /* Lower opacity for twinkle effect */
+    }
+}
+@keyframes moveShootingStar {
+    to {
+        transform: translateY(100vh) translateX(-50vw); /* Move star diagonally to the bottom left */
+        opacity: 0; /* Fade out the shooting star */
+    }
+}

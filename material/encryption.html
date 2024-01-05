@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hacker-crypto-style.css">
+    <title>Hacker Theme - Encryption</title>
+</head>
+<body>
+    <div class="red-black-container">
+        <h1>Encryption Page</h1>
+
+        <!-- Input area for the text with label -->
+        <label for="inputText">Enter Text:</label>
+        <textarea id="inputText" placeholder="Your secret message..."></textarea>
+        <br>
+        <br>
+        <!-- Input area for the shift value with label -->
+        <label for="shiftValue">Enter Shift Value:</label>
+        <input type="number" id="shiftValue" placeholder="Enter shift value...">
+
+        <!-- Button to perform encryption -->
+        <button onclick="performEncryption()">Encrypt</button>
+        <br>
+        <br>
+        <!-- Output area for the result with label -->
+        <label for="outputResult">Result:</label>
+        <div id="outputResult"></div>
+
+        <a href="index.html">Back to Home</a>
+    </div>
+    <script src="encryption-script.js"></script>
+</body>
+</html>

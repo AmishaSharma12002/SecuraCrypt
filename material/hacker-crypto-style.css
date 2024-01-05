@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000; /* Black background color */
+    color: #f00; /* Red text color for the hacker theme */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.red-black-container {
+    text-align: center;
+}
+
+label {
+    margin: 10px;
+    display: block;
+    color: #f00; /* Red text color for labels */
+}
+
+textarea,
+input {
+    margin: 10px;
+    padding: 5px;
+    font-size: 16px;
+    color: #f00; /* Red text color for input fields */
+    background-color: #333; /* Dark grey background color for input fields */
+    border: 1px solid #f00; /* Red border color for input fields */
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+    border: 1px solid #fff; /* White border color on focus */
+}
+
+button {
+    margin: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: rgb(255, 255, 255); /* Red text color for the hacker theme */
+    background-color: #f00; /* Red background color for buttons */
+    border: 1px solid #f00; /* Red border color for the hacker theme */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fff; /* White background color on hover */
+    color: #f00; /* Red text color on hover */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* White glow on hover */
+}
+
+a {
+    color: #f00; /* Red color for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: rgba(255, 0, 0, 0.5); /* Semi-transparent red on hover */
+}
+.shooting-star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff; /* White color for shooting stars */
+    border-radius: 50%;
+    animation: twinkleShootingStar 0.5s linear infinite alternate, moveShootingStar linear;
+}
+
+@keyframes twinkleShootingStar {
+    to {
+        opacity: 0.5; /* Lower opacity for twinkle effect */
+    }
+}
+@keyframes moveShootingStar {
+    to {
+        transform: translateY(100vh) translateX(-50vw); /* Move star diagonally to the bottom left */
+        opacity: 0; /* Fade out the shooting star */
+    }
+}
